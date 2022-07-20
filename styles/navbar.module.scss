@@ -4,6 +4,7 @@
     background-color: #000;
     color: white;
     position: relative;
+    transition: transform 1s ease-in-out;
 
     .logo {
         position: absolute;
@@ -22,13 +23,40 @@
         list-style: none;
         align-items: center;
         display: flex;
+        transition: all 1s ease-in-out;
 
         ul {
             display: flex;
             list-style: none;
+
             li {
-                margin-right: 3rem;
+                margin-right: 1rem;
+                transition: all 1s ease-in-out;
+                opacity: 0.6;
+                cursor: pointer;
+
+                a {
+                    border-radius: 5px;
+                    padding: 0.7rem 2rem;
+                }
+            }
+
+            li.active {
+
+                transition: all 1s ease-in-out;
+                opacity: 1;
+
+                a {
+                    background-color: rgba($color: #fff, $alpha: 1);
+                    border-radius: 15px;
+                    color: black;
+                }
             }
         }
     }
+}
+
+.navbar.active {
+    position: fixed;
+    top: 0;
 }
