@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
         <Navbar />
-        <section className={styles.section}>Hello Home</section>
+        <section className={styles.section}>Good Homework</section>
         <Footer />
     </div>
   )
