@@ -30,12 +30,12 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`${isScrollDown ? `${styles.active} ` :  null } ${styles.navbar}`}>
+        <nav className={`${isScrollDown ? `${styles.active} ` :  "" } ${styles.navbar}`}>
             <div className={styles.logo}>The Singto</div>
             <div className={styles.menubar}>
                 <ul>
-                    <li className={`${router.pathname == "/" ? `${styles.active}` : null }`}><Link href="/"><a>Home</a></Link></li>
-                    <li className={`${router.pathname == "/about" ? `${styles.active}` : null }`}><Link href="/about"><a>About</a></Link></li>
+                    <li className={`${router.pathname == "/" ? `${styles.active}` : "" }`}><Link href="/"><a>Home</a></Link></li>
+                    <li className={`${router.pathname == "/about" ? `${styles.active}` : "" }`}><Link href="/about"><a>About</a></Link></li>
                     <li><Link href="/contact"><a>Contact</a></Link></li>
                     <li><Link href="/project"><a>Project</a></Link></li>
                 </ul>
