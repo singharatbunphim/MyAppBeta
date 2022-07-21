@@ -1,0 +1,67 @@
+.feature_wrapper {
+    width: 100%;
+    background: linear-gradient(to right, rgba($color: rgb(149, 73, 255), $alpha: 1), rgba($color: rgb(14, 0, 34), $alpha: 1));
+    height: auto;
+    z-index: 1;
+
+    padding: 10rem;
+
+    .header {
+        font-size: 2.3rem;
+        color: white;
+        opacity: 0.6;
+    }
+
+
+    .feature_cards {
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        grid-gap: 1rem;
+        padding: 2rem 2rem;
+    }
+
+    .feature_cards_item {
+        display: flex;
+        margin-bottom: 2rem;
+        padding: 1.3rem 2rem;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        position: relative;
+
+        .feature_cards_item_icon {
+            padding: 1rem;
+            width: 3rem;
+            background-color: rgba($color: rgb(22, 18, 28), $alpha: 0.1);
+            border-radius: 0.25rem;
+            color: black;
+            margin-right: 5px;
+            opacity: 0.7;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        .feature_card_item_title{
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            color: rgba($color: rgb(149, 73, 255), $alpha: 1);
+            opacity: 0.9;
+        }
+
+        
+    }
+
+    .feature_cards_item:hover {
+        background-color: rgba($color: #fff, $alpha:0.5);
+        transition: all 0.3s ease-in-out;
+    }
+}

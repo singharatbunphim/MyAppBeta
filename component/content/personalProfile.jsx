@@ -1,5 +1,6 @@
 import styles from '../../styles/content/personalProfile.module.scss'
-
+import { AiFillFacebook , AiOutlineGithub , AiFillInstagram } from 'react-icons/ai'
+import MainFeature from './feature/MainFeature'
 const PersonalProfile = () => {
 
     return (
@@ -24,12 +25,15 @@ const PersonalProfile = () => {
                     <div className="personal"></div>
                     <div className={styles.circle_bg}></div>
                     <div className={styles.shourtContact}>
-                        <span>L</span>
-                        <span>F</span>
-                        <span>I</span>
+                        <span><AiOutlineGithub /></span>
+                        <span><AiFillFacebook /></span>
+                        <span><AiFillInstagram /></span>
                     </div>
                 </div>
             </div>
+
+            <MainFeature />
+            
         </>
     )
 }
