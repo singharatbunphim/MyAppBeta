@@ -1,0 +1,85 @@
+.wrapper_container {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    .col_1_content {
+        display: flex;
+        width: 40rem;
+        height: 100%;
+        flex-direction: column  ;
+        position: relative;
+        padding: 8rem;
+
+        .name {
+            position: relative;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba($color: rgb(34, 5, 76), $alpha: 1);
+            .f_name {
+                letter-spacing: 3px;
+                margin-bottom: 0.5rem;   
+            }
+
+            .l_name {
+                letter-spacing: 15px;
+                margin-bottom: 1rem; 
+            }
+        }
+
+        .lorem {
+                padding: 0.3rem;
+                margin-bottom: 0.5rem;
+                font-weight: 900;
+        }
+
+        .end {
+            margin-top: 1rem;
+
+            button {
+                background: rgba($color: rgb(149, 73, 255), $alpha: 1);
+                padding: 1rem 2.2rem;
+                border: 0px;
+                color: white;
+                border-radius: 5px;
+            }
+            
+        }
+    }
+
+    .col_2_content {
+        width: 70rem;
+        height: 100%;
+        position: relative;
+
+
+        .circle_bg {
+            width: 50rem;
+            height: 50rem;
+            position: absolute;
+            bottom: -15rem;
+            right: -2rem;
+            background: linear-gradient(rgba($color: rgb(149, 73, 255), $alpha: 1), rgba($color: rgb(34, 1, 80), $alpha: 1));
+            border-radius: 100%;
+            z-index: 0;
+        }
+
+        .shourtContact {
+            display: grid;
+            grid-template-columns: 3fr;
+            width: 3rem;
+            height: 10rem;
+            position: absolute;
+            right: 10rem;
+            bottom: 2rem;
+            background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.2);
+
+            span {
+                padding: 1rem;
+                color: white;
+            }
+        }
+    }
+}

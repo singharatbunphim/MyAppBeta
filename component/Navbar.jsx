@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <nav className={`${isScrollDown ? `${styles.active} ` :  null } ${styles.navbar}`}>
-            <div className={styles.logo}>MyLogo</div>
+            <div className={styles.logo}>The Singto</div>
             <div className={styles.menubar}>
                 <ul>
                     <li className={`${router.pathname == "/" ? `${styles.active}` : null }`}><Link href="/"><a>Home</a></Link></li>
