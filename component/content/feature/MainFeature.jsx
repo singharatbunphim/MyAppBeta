@@ -1,38 +1,27 @@
 import styles from '../../../styles/content/feature.module.scss'
 import React , { createContext } from 'react'
 import Feature_item from './Feature';
+import {ImClipboard} from 'react-icons/im'
 
 const obj = [
   {
     icon : "ImClipboard",
-    title: "Boards",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
+    title: "Earn Certificate Covid-19",
+    lorem: "This is a services a earn to certificate for covid-19",
+    bg: "red",
   },
   {
-    icon : "ImClipboard",
-    title: "Tasks",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
-  },
-  {
-    icon : "ImClipboard",
-    title: "Members",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
-  },
-  {
-    icon : "ImClipboard",
-    title: "Timers",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
-  },
-  {
-    icon : "ImClipboard",
-    title: "Follow",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
-  },
-  {
-    icon : "ImClipboard",
-    title: "Recetly Accessed",
-    lorem: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam inventore tempore distinctio voluptatibus exercitationem optio omnis ipsa facere error, tempora sequi nobis molestias amet voluptates vitae libero qui quidem aspernatur nulla minima quis iste non! Doloremque, impedit omnis ullam fuga commodi perspiciatis neque explicabo officia quod voluptate nisi iusto laboriosam."
+    icon : "API DATA",
+    title: "API DATA",
+    lorem: "This is api data anyone use free",
   }
+  ,
+  {
+    icon : "F2A",
+    title: "F2A",
+    lorem: "This is F2A data anyone use free",
+  }
+  
 ]
 
 export const FeatureData = createContext(obj);

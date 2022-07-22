@@ -1,6 +1,7 @@
 import styles from '../../styles/content/personalProfile.module.scss'
 import { AiFillFacebook , AiOutlineGithub , AiFillInstagram } from 'react-icons/ai'
 import MainFeature from './feature/MainFeature'
+import Experience from './Experience'
 const PersonalProfile = () => {
 
     return (
@@ -33,6 +34,9 @@ const PersonalProfile = () => {
             </div>
 
             <MainFeature />
+
+            <Experience />
+        
             
         </>
     )

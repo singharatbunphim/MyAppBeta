@@ -15,7 +15,7 @@
 
     .feature_cards {
         display: grid;
-        grid-template-columns: 4fr 4fr;
+        grid-template-columns: 4fr 4fr 4fr;
         grid-gap: 1rem;
         padding: 2rem 2rem;
     }
@@ -24,6 +24,7 @@
         display: flex;
         margin-bottom: 2rem;
         padding: 1.3rem 2rem;
+        height: auto;
         cursor: pointer;
         background-color: #fff;
         border-radius: 0.5rem;
@@ -51,9 +52,16 @@
         }
 
         .feature_card_item_title{
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             padding: 1rem 2rem;
             color: rgba($color: rgb(149, 73, 255), $alpha: 1);
+            opacity: 0.9;
+        }
+
+        .feature_card_item_lorem{
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            color: rgba($color: rgb(0, 0, 0), $alpha: 1);
             opacity: 0.9;
         }
 
@@ -65,3 +73,4 @@
         transition: all 0.3s ease-in-out;
     }
 }
+
