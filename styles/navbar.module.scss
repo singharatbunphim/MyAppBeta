@@ -1,12 +1,60 @@
+
+$breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 1024px,
+    lgx: 1024px,
+);
+
+@mixin Media_up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+@mixin Media_Phone($breakpoint){
+    @media screen and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+@mixin Media_tablet($breakpoint) {
+    @media (min-width:540px) and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+
+@mixin Media_labtop($breakpoint)  {
+    @media (min-width:768px) and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+
 .navbar {
     width: 100%;
-    height: 5rem;
     background-color: #fff;
     color: white;
     z-index: 100;
     position: relative;
     transition: transform 1s ease-in-out;
     border-bottom: 1px solid rgba($color: rgb(95, 13, 218), $alpha: 0.1);
+    @include Media_up(lgx) {
+        height: 10rem;
+    }
+
+    @include Media_labtop(lg) {
+        height: 8rem;
+    }
+
+    @include Media_tablet(md) {
+        height: 6rem;
+    }
+
+    @include Media_Phone(sm) {
+        height: 5rem;
+    }
 
     .logo {
         position: absolute;
@@ -19,6 +67,33 @@
         font-weight: 900;
         letter-spacing: 1.4px;
         color: rgba($color: rgb(95, 13, 218), $alpha: 1);
+        @include Media_up(lgx) {
+            font-size: 2.5rem;
+        }
+
+        @include Media_Phone(sm) {
+            left: 1.4rem;
+        }
+
+
+
+    }
+
+    .hamburger_menu {
+        position: absolute;
+        top:0;
+        right: 1rem;
+        bottom: 0;
+        font-size: 2rem;
+        color:rgb(95, 13, 218);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @include Media_up(lgx){
+            display: none;
+        }
     }
 
     .menubar {
@@ -27,8 +102,12 @@
         height: 100%;
         list-style: none;
         align-items: center;
-        display: flex;
+        display: none;
         transition: all 1s ease-in-out;
+
+        @include Media_up(lg) {
+            display: flex;
+        }
 
         ul {
             display: flex;

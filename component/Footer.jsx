@@ -47,6 +47,23 @@ const Footer = () => {
                         </div>
                     </div>
 
+                    <div className={styles.footer_cards}>
+                        <span><a>Test</a></span>
+                        <div className={styles.cards_items}>
+                            <Link href="/project">Null</Link>
+                        </div>
+                        <div className={styles.cards_items}>
+                            <Link href="/project">Null</Link>
+                        </div>
+                        <div className={styles.cards_items}>
+                            <Link href="/project">Null</Link>
+                        </div>
+                        <div className={styles.cards_items}>
+                            <Link href="/project">Null</Link>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div className={styles.footer_end}>
                     <span><h4> Copyright &copy; 2022 & The Singto </h4></span>

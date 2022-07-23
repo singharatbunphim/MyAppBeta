@@ -2,6 +2,7 @@ import styles from '../styles/navbar.module.scss'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React , { useState , useEffect } from 'react'
+import {TiThMenuOutline} from 'react-icons/ti'
 
 const Navbar = () => {
 
@@ -40,6 +41,7 @@ const Navbar = () => {
                     <li><Link href="/project"><a>Project</a></Link></li>
                 </ul>
             </div>
+            <div className={styles.hamburger_menu}><TiThMenuOutline /></div>
         </nav>
     )
 }
