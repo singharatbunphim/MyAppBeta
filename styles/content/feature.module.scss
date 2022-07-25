@@ -1,13 +1,58 @@
+$breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 1024px,
+    lgx: 1024px,
+);
+
+@mixin Media_up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+@mixin Media_Phone($breakpoint){
+    @media screen and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+@mixin Media_tablet($breakpoint) {
+    @media (min-width:540px) and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+
+@mixin Media_labtop($breakpoint)  {
+    @media (min-width:768px) and (max-width: map-get($breakpoints,$breakpoint)) {
+        @content;
+    }
+}
+
+
+
+
+
 .feature_container {
     margin: 0px;
     width: 100%;
-    height: 80rem;
+    height: auto;
 
 
     .feature_Header{
         padding: 5rem;
         display: flex;
         justify-content: center;
+
+        @include Media_Phone(sm){
+            padding: 2rem 1rem;
+        }
+
+        @include Media_tablet(md){
+            padding: 2rem 1rem;
+        }
+
         span{
             font-size: 2.3rem;
             letter-spacing: 1.4px;
@@ -20,9 +65,54 @@
         padding: 8rem 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 1rem;
+
+        @include Media_Phone(sm){
+            grid-template-columns: 1fr;
+            padding: 0rem 1rem;
+        }
+
+        @include Media_tablet(md){
+            grid-template-columns: 1fr;
+            padding: 0rem 1rem;
+        }
+
+        @include Media_labtop(lg){
+            grid-template-columns: 1fr;
+            padding: 0rem 1rem;
+        }
+
+        @include Media_up(lgx){
+            grid-template-columns: 1fr 1fr;
+            padding: 0rem 1rem;
+            height: 30rem;
+        }
 
         .feature_Body_left {
             width: 45rem;
+            transition: all 0.3s ease-in;
+
+            @include Media_Phone(sm){
+                width: 100%;
+                height: auto;
+            }
+
+            @include Media_tablet(md){
+                width: 100%;
+                height: auto;
+            }
+
+            @include Media_labtop(lg){
+                width: 100%;
+                height: auto;
+            }
+
+            @include Media_up(lgx){
+                width: 100%;
+                height: auto;
+            }
+    
+    
             
             height: 100%;
             position: relative;
@@ -36,10 +126,16 @@
 
             .title {
                 color: rgb(149, 73, 255);
+                @include Media_Phone(sm){
+                    font-size: 1.7rem;
+                }
             }
 
             .lorems {
                 font-size: 1.2rem;
+                @include Media_Phone(sm){
+                    font-size: 0.8rem;
+                }
             }
         }
     }

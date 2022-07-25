@@ -1,13 +1,10 @@
 import styles from '../../../styles/content/feature.module.scss'
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 const FeatureMain = () => {
-
-
-
-    return (
+return (
         <>
         
-            <div className={styles.faq_container}>
+            {/* <div className={styles.faq_container}>
                 <div className={styles.faq_header}>What is Singto ?</div>
                 <div className={styles.cards}>
                     <div className={styles.cardItem}>.</div>
@@ -15,7 +12,7 @@ const FeatureMain = () => {
                     <div className={styles.cardItem}>.</div>
                 </div>
                     
-            </div>
+            </div> */}
 
 
             <div className={styles.feature_container}>
@@ -41,7 +38,7 @@ const FeatureMain = () => {
                 </div>
 
                 <div className={styles.feature_Body}>
-                    <div className={styles.feature_Body_left} style={{order: 1}}  id="body">
+                    <div className={styles.feature_Body_left}>
                             <div className={styles.child_bg}>
                                 <div className={styles.child_head}>
                                 </div>
