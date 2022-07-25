@@ -1,167 +1,73 @@
-
-
-$breakpoints: (
-    sm: 540px,
-    md: 768px,
-    lg: 1024px,
-    lgx: 1024px,
-);
-
-@mixin Media_up($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
-        @content;
-    }
-}
-
-@mixin Media_Phone($breakpoint){
-    @media screen and (max-width: map-get($breakpoints,$breakpoint)) {
-        @content;
-    }
-}
-
-@mixin Media_tablet($breakpoint) {
-    @media (min-width:540px) and (max-width: map-get($breakpoints,$breakpoint)) {
-        @content;
-    }
-}
-
-
-@mixin Media_labtop($breakpoint)  {
-    @media (min-width:768px) and (max-width: map-get($breakpoints,$breakpoint)) {
-        @content;
-    }
-}
-
-
-
-
-
-
-
-
-.feature_wrapper {
+.feature_container {
+    margin: 0px;
     width: 100%;
-    background: linear-gradient(to right, rgba($color: rgb(149, 73, 255), $alpha: 1), rgba($color: rgb(14, 0, 34), $alpha: 1));
-    height: auto;
-    z-index: 1;
+    height: 80rem;
 
-    @include Media_Phone(sm){
-        padding: 3rem;
-    }
 
-    
-    @include Media_tablet(md){
-        padding: 3rem;
-    }
-
-    @include Media_labtop(lg){
+    .feature_Header{
         padding: 5rem;
-    }
-
-    @include Media_up(lg){
-        padding: 8rem;
-    }
-
-
-    .header {
-        font-size: 2.3rem;
-        color: white;
-        opacity: 0.6;
-        padding: 2rem 0rem;
-    }
-
-
-    .feature_cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-
-        @include Media_Phone(sm){
-        grid-template-columns: 1fr;
-
-        }
-
-        @include Media_tablet(md){
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @include Media_labtop(lg){
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        @include Media_up(lgx){
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-
-
-    }
-
-    .feature_cards_item {
         display: flex;
-        margin-bottom: 2rem;
-        height: auto;
-        cursor: pointer;
-        background-color: #fff;
-        border-radius: 0.5rem;
-        position: relative;
-        height: auto;
-
-
-        .feature_card_item_title{
-            font-size: 1.8rem;
-            padding: 1rem 1.2rem;
-            color: rgba($color: rgb(149, 73, 255), $alpha: 1);
-            opacity: 0.9;
-
-                @include Media_Phone(sm){
-                    font-size: 0.8rem;
-        
-                }
-        
-                @include Media_tablet(md){
-                    font-size: 1rem;
-                }
-        
-                @include Media_labtop(lg){
-                    font-size: 1.2rem;
-                }
-        
-                @include Media_up(lgx){
-                    font-size: 1.5rem;
-                }
+        justify-content: center;
+        span{
+            font-size: 2.3rem;
+            letter-spacing: 1.4px;
+            font-weight: 900;
         }
-
-        .feature_card_item_lorem{
-            font-size: 1.4rem;
-            padding: 1rem 1.2rem;
-            color: rgba($color: rgb(0, 0, 0), $alpha: 1);
-            opacity: 0.9;
-
-            @include Media_Phone(sm){
-                font-size: 0.8rem;
-    
-            }
-    
-            @include Media_tablet(md){
-                font-size: 1rem;
-            }
-    
-            @include Media_labtop(lg){
-                font-size: 1rem;
-            }
-    
-            @include Media_up(lgx){
-                font-size: 1rem;   
-            }
-        }
-
-        
     }
 
-    .feature_cards_item:hover {
-        background-color: rgba($color: #fff, $alpha:0.5);
-        transition: all 0.3s ease-in-out;
+    .feature_Body {
+        height: 40rem;
+        padding: 8rem 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .feature_Body_left {
+            width: 45rem;
+            
+            height: 100%;
+            position: relative;
+            filter: blur(-5rem);
+            background-color: rgba(196, 195, 195, 0.6);
+        }
+
+        .feature_Body_right {
+            font-size: 2.3rem;
+            padding: 1rem;
+
+            .title {
+                color: rgb(149, 73, 255);
+            }
+
+            .lorems {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 
+
+.faq_container {
+    width: 100%;
+    height: 50rem;
+    .faq_header {
+        width: 100%;
+        padding: 5rem;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 900;
+        letter-spacing: 1.32px;
+        
+    }
+    .cards {
+        display: flex;
+        justify-content: center;
+
+
+        .cardItem {
+            background-color: rgba(196, 195, 195, 0.6);
+            width: 30rem;
+            height: 30rem;
+            margin-right: 1rem;
+        }
+    }
+}
