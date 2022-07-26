@@ -4,7 +4,7 @@ const FeatureMain = () => {
 return (
         <>
         
-            {/* <div className={styles.faq_container}>
+            <div className={styles.faq_container}>
                 <div className={styles.faq_header}>What is Singto ?</div>
                 <div className={styles.cards}>
                     <div className={styles.cardItem}>.</div>
@@ -12,7 +12,7 @@ return (
                     <div className={styles.cardItem}>.</div>
                 </div>
                     
-            </div> */}
+            </div>
 
 
             <div className={styles.feature_container}>
