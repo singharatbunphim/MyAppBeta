@@ -34,7 +34,7 @@ const PersonalProfile = () => {
             </div>
             
             <Feature />
-            {/* <Experience /> */}
+            <Experience />
         
             
         </>

@@ -1,22 +1,32 @@
 import styles from '../../../styles/content/feature.module.scss'
 import React,{useEffect,useState} from 'react';
+import { HiDatabase , HiCode ,HiOutlinePhotograph } from 'react-icons/hi';
 const FeatureMain = () => {
 return (
         <>
         
             <div className={styles.faq_container}>
-                <div className={styles.faq_header}>What is Singto ?</div>
+                <div className={styles.faq_header}>Performance of App</div>
                 <div className={styles.cards}>
-                    <div className={styles.cardItem}>.</div>
-                    <div className={styles.cardItem}>.</div>
-                    <div className={styles.cardItem}>.</div>
+                    <div className={styles.cardItem}>
+                        <span><HiDatabase /></span>
+                        <p>My 3 Databases </p>
+                        </div>
+                    <div className={styles.cardItem}>
+                        <span><HiCode/></span>
+                        <p>My 12 Projects</p>
+                    </div>
+                    <div className={styles.cardItem}>
+                        <span><HiOutlinePhotograph/></span>
+                        <p>My 120 Blogs</p>
+                    </div>
                 </div>
                     
             </div>
 
 
             <div className={styles.feature_container}>
-                <div className={styles.feature_Header}><span>Last new Update ?</span></div>
+                <div className={styles.feature_Header}><span>Last new Updated</span></div>
 
                 <div className={styles.feature_Body}>
                     <div className={styles.feature_Body_left}  id="body">
@@ -57,7 +67,7 @@ return (
                 </div>
 
                 <div className={styles.feature_Body}>
-                    <div className={styles.feature_Body_left}  id="body">
+                    <div className={styles.feature_Body_left}>
                             <div className={styles.child_bg}>
                                 <div className={styles.child_head}>
                                 </div>

@@ -120,6 +120,71 @@ $breakpoints: (
             background-color: rgba(196, 195, 195, 0.6);
         }
 
+
+
+        .feature_Body_right {
+            font-size: 2.3rem;
+            padding: 1rem;
+
+            .title {
+                color: rgb(149, 73, 255);
+                @include Media_Phone(sm){
+                    font-size: 1.7rem;
+                }
+            }
+
+            .lorems {
+                font-size: 1.2rem;
+                @include Media_Phone(sm){
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+
+    .feature_Body:nth-child(odd) {
+
+
+        .feature_Body_left {
+            order: 1;
+            width: 45rem;
+            transition: all 0.3s ease-in;
+
+            @include Media_Phone(sm){
+                width: 100%;
+                height: auto;
+                order: 0;
+            }
+
+            @include Media_tablet(md){
+                width: 100%;
+                height: auto;
+                order: 0;
+            }
+
+            @include Media_labtop(lg){
+                width: 100%;
+                height: auto;
+                order: 0;
+            }
+
+            @include Media_up(lgx){
+                width: 100%;
+                height: auto;
+                order: 1;
+            }
+    
+    
+            
+            height: 100%;
+            position: relative;
+            filter: blur(-5rem);
+            background-color: rgba(196, 195, 195, 0.6);
+        }
+
+
+
         .feature_Body_right {
             font-size: 2.3rem;
             padding: 1rem;
@@ -170,11 +235,32 @@ $breakpoints: (
             padding-bottom: 1rem;
         }
 
+        @include Media_tablet(md){
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+
+
         .cardItem {
-            background-color: rgba(196, 195, 195, 0.3);
+            background-color: rgba(196, 195, 195, 0.1);
             width: 30rem;
+            flex-direction: column;
             height: 30rem;
+            border-radius: 2px;
             margin-right: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 5px 30px rgba(0,0,0,0.1);
+
+            span {
+                font-size: 6rem;
+                color: rgba(196, 40, 181, 1)
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
 
             @include Media_Phone(sm){
                 width: 100%;
@@ -188,6 +274,7 @@ $breakpoints: (
                 height: 20rem;
                 margin-right: 0.3rem;
             }
+
         }
     }
 }
